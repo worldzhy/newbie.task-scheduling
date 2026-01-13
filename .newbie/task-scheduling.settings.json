@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "@nestjs/schedule": "^4.0.1"
+    "@nestjs/schedule": "latest"
   },
   "devDependencies": {
-    "@types/cron": "^2.0.1"
+    "@types/cron": "latest"
   }
 }
