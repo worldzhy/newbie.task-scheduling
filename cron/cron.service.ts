@@ -57,7 +57,7 @@ export class CronTaskService {
       const cronInMemory = cronsInMemory.get(cron.name);
 
       if (cronInMemory) {
-        if (cron.running !== cronInMemory.running) {
+        if (cron.running !== cronInMemory.isCallbackRunning) {
           if (cron.running) {
             cronInMemory.start();
           } else {
@@ -98,7 +98,7 @@ export class CronTaskService {
     return {
       name,
       cronTime: cron.cronTime.toString(),
-      running: cron.running,
+      running: cron.isCallbackRunning,
       lastDate: cron.lastDate(),
       nextDate,
     };
